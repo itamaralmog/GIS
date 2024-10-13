@@ -67,16 +67,6 @@ int main() {
         {48.8566, 2.3522}    // Paris
     };
 
-
-
-    double lat1 = 32.0853, lon1 = 34.7818; // תל אביב
-    double lat2 = 40.7128, lon2 = -74.0060; // ניו יורק
-
-    double distance = haversine(lat1, lon1, lat2, lon2);
-    double distance1= haversine(coordinates[0].first,coordinates[0].second,coordinates[1].first,coordinates[1].second);
-    std::cout << "המרחק בין תל אביב לניו יורק הוא: " << distance << " קילומטרים" << std::endl;
-    std::cout << "המרחק בין תל אביב לניו יורק הוא: " << distance1 << " קילומטרים" << std::endl;
-
     mutex mtx;
     std::thread t1(threadTask, std::ref(coordinates), 0, 2, std::ref(mtx));
     std::thread t2(threadTask, std::ref(coordinates), 1, 3, std::ref(mtx));
