@@ -1,8 +1,9 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -pthread -Wall
-TARGET = geo_distance
-SRCS = gis.cpp
+
+SRCS = main.cpp classCsv.cpp gis.cpp
 OBJS = $(SRCS:.cpp=.o)
+TARGET = my_program
 
 all: $(TARGET)
 
